@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./services.css">
+    <link rel="stylesheet" href="./house-made.css">
+    <link rel="stylesheet" href="./space.css">
+    <link rel="stylesheet" href="./days.css">
+    <link rel="stylesheet" href="./navToggle.css">
+    <link rel="icon" type="image/png" href="img/logo-header.png" />
+    <title>Alê Bolos e Doces</title>
+
+</head>
+
+
+
+
+
+<body>
+
+    <header>
+
+        <ul id="links">
+            <li id="btn-home"><a href="#">Início</a></li>
+            <li id="btn-personalized"><a href="#">Personalizados</a></li>
+            <li id="btn-house-made"><a href="#">Caseiros</a></li>
+            <li id="btn-informations"><a href="#">informações</a></li>
+            <li id="btn-space"><a href="#">Localização</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5585988556541">Contato</a></li>
+
+
+        </ul>
+        <div id="menu-toggle">
+            <button id="btn-toggle" onclick="showToggle()">
+                <img src="./img/menu.png" alt="menu">
+            </button>
+        </div>
+
+    </header>
+
+
+    <div class="bg-start">
+        <div class="mascara"></div>
+        <!----------------------------------------HOME------------------------------------------------>
+        <section id="first-section">
+
+
+
+
+            <div id="logo-side">
+                <img src="./img/logo.png" alt="logo" id="logo-img">
+                <div id="descricao">
+                    <p id="p1">Adoce seu dia na <span>Alê Bolos e Doces</span></p>
+
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=5585988556541" class="btnStart1">Entrar em Contato</a>
+
+            </div>
+
+            <section id="cutCake">
+
+                <img src="img/married.jpg" alt="banner-bolo-img" id="cakeBanner-img">
+            </section>
+        </section>
+
+    </div>
+
+    
+
+    <section class="personalized-section">
+        <h1 id="title-personalized">Temas Personalizados</h1>
+
+
+
+        <ul class="list-services">
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Minecraft
+                    </h1>
+                    <img src="img/minecraft.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+
+                <button class="btn-card" onclick="clickButton('Minecraft')">Escolher</button>
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Borboletas
+                    </h1>
+                    <img src="img/butterfly.jpg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+
+                <button class="btn-card" onclick="clickButton('Borboletas')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Flamengo
+                    </h1>
+                    <img src="img/flamengo.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+                <button class="btn-card" onclick="clickButton('Flamengo')">Escolher</button>
+                <!-- <button class="btn-card" onclick="mudarImg3()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Carros
+                    </h1>
+                    <img src="img/cars.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+                <button class="btn-card" onclick="clickButton('Carros')">Escolher</button>
+                <!-- <button class="btn-card" onclick="mudarImg4()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Tik Tok
+                    </h1>
+                    <img src="img/tiktok.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+                <button class="btn-card" onclick="clickButton('Tik Tok')">Escolher</button>
+                <!-- <button class="btn-card" onclick="mudarImg5()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Baby Shark
+                    </h1>
+                    <img src="img/babyShark.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+                <button class="btn-card" onclick="clickButton('Baby Shark')">Escolher</button>
+                <!-- <button class="btn-card" onclick="mudarImg5()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Roblox
+                    </h1>
+                    <img src="img/roblox.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+                <button class="btn-card" onclick="clickButton('Roblox')">Escolher</button>
+                <!-- <button class="btn-card" onclick="mudarImg5()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Senhor dos Anéis
+                    </h1>
+                    <img src="img/rings.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+                <button class="btn-card" onclick="clickButton('Senhor dos Anéis')">Escolher</button>
+                <!-- <button class="btn-card" onclick="mudarImg5()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Emfermagem
+                    </h1>
+                    <img src="img/doctor.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+                </div>
+                <button class="btn-card" onclick="clickButton('Enfermagem')">Escolher</button>
+                <!-- <button class="btn-card" onclick="mudarImg5()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Tema Mulher Maravilha
+                    </h1>
+                    <img src="img/mm.jpg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                    <p id="montar">Monte seu bolo aqui!</p>
+
+                </div>
+                <button class="btn-card" onclick="clickButton('Mulher Maravilha')">Escolher</button>
+                <!-- <button class="btn-card" onclick="mudarImg5()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+        </ul>
+
+
+    </section>
+
+
+    <!------------------------------BOLOS CASEIROS-------------->
+    <!-- <div class="title-house-made">
+        <h1>Bolos Caseiros</h1>
+    </div> -->
+
+    <h1 id="title-house-made">Bolos Caseiros</h1>
+
+    <section class="house-made-section">
+
+    
+
+
+        <ul class="list-house-made">
+
+
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Mole
+                    </h1>
+                    <img src="img/boloMole.jpeg" class="img-list">
+                </div>
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo Mole')">Escolher</button>
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+            </li>
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Fofo
+                    </h1>
+                    <img src="img/bolo2.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo Fofo 1')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Ninho
+                    </h1>
+                    <img src="img/ninho.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo de Ninho')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Abacaxi
+                    </h1>
+                    <img src="img/bolo3.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo de Abacaxi')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Chocolate
+                    </h1>
+                    <img src="img/chocolate.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo de Chocolate')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Goiaba
+                    </h1>
+                    <img src="img/goiaba.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo de Goiaba')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Laranja
+                    </h1>
+                    <img src="img/mesclado.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo de Laranja')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Cobertura
+                    </h1>
+                    <img src="img/cobertura.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo com Cobertura')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Fofo
+                    </h1>
+                    <img src="img/bolo1.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                < <button class="btn-card" onclick="clickButtonCaseiro('Bolo Fofo 2')">Escolher</button>
+                    <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                    <div class="card-logo">
+                        <img src="img/logo.png">
+                    </div>
+
+            </li>
+
+            <li class="card-list">
+                <div class="image-side">
+                    <h1 class="title-card">
+                        Mesclado
+                    </h1>
+                    <img src="img/fofo.jpeg" class="img-list">
+                </div>
+
+                <div class="info-card">
+                    <p>Catálogo de Preços por Fatia
+                    </p>
+                </div>
+
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo Mesclado')">Escolher</button>
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+
+                <div class="card-logo">
+                    <img src="img/logo.png">
+                </div>
+
+            </li>
+
+    </section>
+
+    <section class="info-section">
+
+        <div class="info-images">
+
+            <img src="./img/info-start.jpg" alt="informações">
+            <img src="./img/instructions.jpg" alt="informações">
+        </div>
+    </section>
+
+    <section class="local-section">
+
+        <div class="container-local">
+            <div class="info1">
+                <h1>Localização:</h1>
+                <p>📍 Rua Teodoro de Castro 2180, Fortaleza - CE</p>
+            </div>
+
+            </h1>
+
+            <div class="info2">
+                <h1>Funcionamento:</h1>
+                <p>📅 DE SEGUNDA A SEXTA:</p>
+                <p>⏰ DAS 8:00 ATÉ AS 20:00 HORAS</p>
+                <p id="saturday">📅Sábado:</p>
+                <p>⏰ DAS 8:00 ATÉ AS 18:00 HORAS</p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <form id="fale-conosco">
+
+        <input placeholder="Seu Nome" type="text" name="Nome" id="inputName">
+        <input placeholder="Seu Número, Ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" maxlength="15" id="inputNumber"
+            onkeyup="handlePhone(event)">
+        <label>Tema Escolhido:</label>
+        <p id="boloEscolhido"></p>
+        <input type="hidden" name="Bolo" id="inputBolo">
+
+
+        <label for="select-massa">Escolha sua Massa</label>
+        <select id="select-massa">
+            <option value="Não preenchido">Escolha Aqui</option>
+            <option value="Amanteigada com Aroma de Baunilha">Baunilha</option>
+            <option value="Massa cremosa com chocolate 50%">Chocolate</option>
+        </select>
+
+        <label for="select-recheio">Escolha seu Recheio</label>
+        <select id="select-recheio">
+            <option value="Não preenchido">Escolha Aqui</option>
+            <option value="4 Leites">4 Leites</option>
+            <option value="Brigadeiro">Brigadeiro</option>
+            <option value="Ninho">Ninho</option>
+            <option value="Limão">Limão</option>
+            <option value="Beijinho">Beijinho</option>
+            <option value="Doce de Leite">Doce de Leite</option>
+            <option value="Churros">Churros</option>
+            <option value="Maracujá">Maracujá</option>
+            <option value="Oreo">Oreo</option>
+        </select>
+
+        <label for="select-especial">Recheios Especias</label>
+        <select id="select-especial">
+            <option value="Não preenchido">Escolha Aqui</option>
+            <option value="Creme de Abacaxi">Creme de Abacaxi</option>
+            <option value="Ninho com Morango">Ninho com Morango</option>
+            <option value="Crocante">Crocante</option>
+            <option value="Mousse de Morango">Mousse de Morango</option>
+        </select>
+
+        <label for="select-fatias">Quatidade de Fatias</label>
+        <select id="select-fatias">
+            <option value="Não preenchido">Escolha Aqui</option>
+            <option value="8 Fatias - R$ 80,00">8 Fatias - R$ 80,00</option>
+            <option value="10 Fatias - R$ 110,00">10 Fatias - R$ 110,00</option>
+            <option value="15 Fatias - R$ 130,00">15 Fatias - R$ 130,00</option>
+            <option value="20 Fatias - R$ 150,00">20 Fatias - R$ 150,00</option>
+            <option value="25 Fatias - R$ 170,00">25 Fatias - R$ 170,00</option>
+            <option value="35 Fatias - R$ 200,00">35 Fatias - R$ 200,00</option>
+            <option value="50 Fatias - R$ 250,00">50 Fatias - R$ 250,00</option>
+        </select>
+
+        <label for="adress">Endereço de Entrega</label>
+        <input type="text" id="adress" placeholder="Digite seu endereço">
+        <label for="adress">No caso de retirada preencha com <span>"Retirada"</span></label>
+
+
+        <button id="btnOrder" class="btn-orcamento" onclick="enviarForm()">Enviar Pedido</button>
+        <button id="btnBack" onclick="() => desligarMascara()">Voltar</button>
+    </form>
+    <div id="mascara-formulario" onclick="desligarMascara()"></div>
+
+
+    <form id="form-caseiro">
+
+        <input placeholder="Seu Nome" type="text" name="Nome" id="inputName2">
+        <input placeholder="Seu Número, Ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" maxlength="15" id="inputNumber2"
+            onkeyup="handlePhone(event)">
+        <label>Bolo Escolhido:</label>
+        <p id="boloCaseiroEscolhido"></p>
+        <input type="hidden" name="Bolo" id="inputBoloCaseiro">
+
+
+        <label for="select-fatias">Quatidade de Fatias</label>
+        <select id="select-fatias2">
+            <option value="Não preenchido">Escolha Aqui</option>
+            <option value="8 Fatias - R$ 80,00">8 Fatias - R$ 80,00</option>
+            <option value="10 Fatias - R$ 110,00">10 Fatias - R$ 110,00</option>
+            <option value="15 Fatias - R$ 130,00">15 Fatias - R$ 130,00</option>
+            <option value="20 Fatias - R$ 150,00">20 Fatias - R$ 150,00</option>
+
+        </select>
+
+        <label for="adress">Endereço de Entrega</label>
+        <input type="text" id="adress2" placeholder="Digite seu endereço">
+        <label for="adress">No caso de retirada preencha com <span>"Retirada"</span></label>
+
+
+        <button id="btnOrder" class="btn-orcamento" onclick="enviarFormCaseiro()">Enviar Pedido</button>
+        <button id="btnBack" onclick="() => desligarMascara()">Voltar</button>
+    </form>
+
+
+    <div class="link-insta">
+        <a href="https://www.instagram.com/ale_bolosedoces2/" target="_blank">
+            <img src="./img/Instagram-Icon.png" alt="instagram-img" id="insta-img">
+        </a>
+    </div>
+
+
+    <footer>
+        Copyright © George Lucas. All rights reserved.
+    </footer>
+
+</body>
+<script src="./scripts.js"></script>
+
+
+</html>
