@@ -237,6 +237,12 @@
 
 @media (width < 780px) {
 
+    .house-made-section {
+
+    
+        background-size: 300px;
+    }
+
     .card-logo {
 
         right: 0;

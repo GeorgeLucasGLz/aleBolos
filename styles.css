@@ -596,6 +596,12 @@ input {
 @media (width < 1000px) {
 
 
+    body {
+        
+        background-size: 100%;
+        
+    
+    }
 
     header #links {
         visibility: hidden;
@@ -644,13 +650,8 @@ input {
 }
 
 @media (width < 850px) {
-    .bg-start {
+  
 
-
-
-        background-position-x: -350px;
-
-    }
 
 
     .images-patrocinio {
@@ -670,6 +671,13 @@ input {
 
 
 @media (width < 650px) {
+
+    body {
+        
+        background-size: 150%;
+        
+    
+    }
 
     .info-images img {
 
