@@ -107,42 +107,73 @@ function formatarCelular(value) {
 
 //Enviar Formulário
 
+// function enviarForm() {
+
+//     const bossNumber = "+558588556541"
+//     const name = document.querySelector('#inputName').value
+//     const number = document.querySelector('#inputNumber').value
+//     const nameCake = document.querySelector('#inputBolo').value
+//     const massa = document.querySelector('#select-massa').value
+//     const recheio = document.querySelector('#select-recheio').value
+//     const special = document.querySelector('#select-especial').value
+//     const valor = document.querySelector('#select-fatias').value
+//     const adress = document.querySelector('#adress').value
+//     const yourOrder = "Seu Pedido: "
+//     const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
+//     const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região."
+//     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
+
+
+//     // if (name.length || number.length === 0) {
+//     //     alert('Preencha as informações')
+//     // } else {
+//     const url = "https://wa.me/" + bossNumber + "?text="
+//         + msgDefault + "%0A%0A"
+//         + yourOrder + "%0a"
+//         + "Nome: " + name + "." + "%0a"
+//         + "Número: " + number + "." + "%0a"
+//         + "Tema Escolhido: " + nameCake + "." + "%0a"
+//         + "Massa Escolhida: " + massa + "." + "%0a"
+//         + "Recheio Escolhido: " + recheio + "." + "%0a"
+//         + "Recheio Especial: " + special + "." + "%0a"
+//         + "Valor: " + valor + "." + "%0a"
+//         + "Endereço de Entrega: " + adress + "." + "%0a%0a"
+//         + msgDelivery + "%0a%0a"
+//         + msgInsta + "%0A%0A";
+//     window.open(url, '_blank').focus()
+
+
+// }
+
 function enviarForm() {
+    const bossNumber = "+558588556541";
+    const name = document.querySelector('#inputName').value;
+    const number = document.querySelector('#inputNumber').value;
+    const nameCake = document.querySelector('#inputBolo').value;
+    const massa = document.querySelector('#select-massa').value;
+    const recheio = document.querySelector('#select-recheio').value;
+    const special = document.querySelector('#select-especial').value;
+    const valor = document.querySelector('#select-fatias').value;
+    const adress = document.querySelector('#adress').value;
+    const yourOrder = "Seu Pedido: ";
+    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`;
+    const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região.";
+    const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/";
 
-    const bossNumber = "+558588556541"
-    const name = document.querySelector('#inputName').value
-    const number = document.querySelector('#inputNumber').value
-    const nameCake = document.querySelector('#inputBolo').value
-    const massa = document.querySelector('#select-massa').value
-    const recheio = document.querySelector('#select-recheio').value
-    const special = document.querySelector('#select-especial').value
-    const valor = document.querySelector('#select-fatias').value
-    const adress = document.querySelector('#adress').value
-    const yourOrder = "Seu Pedido: "
-    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
-    const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região."
-    const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
+    const messageContent = `${msgDefault}%0A%0A${yourOrder}%0aNome: ${name}.%0aNúmero: ${number}.%0aTema Escolhido: ${nameCake}.%0aMassa Escolhida: ${massa}.%0aRecheio Escolhido: ${recheio}.%0aRecheio Especial: ${special}.%0aValor: ${valor}.%0aEndereço de Entrega: ${adress}.%0a%0a${msgDelivery}%0a%0a${msgInsta}%0A%0A`;
+    const url = "https://wa.me/" + bossNumber + "?text=" + messageContent;
 
-    // if (name.length || number.length === 0) {
-    //     alert('Preencha as informações')
-    // } else {
-    const url = "https://wa.me/" + bossNumber + "?text="
-        + msgDefault + "%0A%0A"
-        + yourOrder + "%0a"
-        + "Nome: " + name + "." + "%0a"
-        + "Número: " + number + "." + "%0a"
-        + "Tema Escolhido: " + nameCake + "." + "%0a"
-        + "Massa Escolhida: " + massa + "." + "%0a"
-        + "Recheio Escolhido: " + recheio + "." + "%0a"
-        + "Recheio Especial: " + special + "." + "%0a"
-        + "Valor: " + valor + "." + "%0a"
-        + "Endereço de Entrega: " + adress + "." + "%0a%0a"
-        + msgDelivery + "%0a%0a"
-        + msgInsta + "%0A%0A";
-    window.open(url, '_blank').focus()
-
-
+    if (isIOS) {
+        // Construindo a mensagem para o alerta
+        const alertMessage = `Para continuar, por favor, copie a mensagem abaixo e abra o WhatsApp manualmente:\n\n${messageContent}`;
+        // Exibindo o alerta
+        alert(alertMessage);
+    } else {
+        // Se não for iOS, abre o link diretamente
+        window.open(url, '_blank').focus();
+    }
 }
 
 
