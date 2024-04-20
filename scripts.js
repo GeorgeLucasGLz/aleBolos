@@ -66,7 +66,7 @@ function desligarMascara() {
 
 }
 
-function clickButtonCaseiro(nomeBolo) {
+function clickButtonCaseiro(nomeBolo, valorBolo) {
     formCaseiro.style.left = "50%"
     formCaseiro.style.transform = "translateX(-50%)"
     mascara.style.visibility = "visible"
@@ -76,6 +76,8 @@ function clickButtonCaseiro(nomeBolo) {
 
     document.querySelector('#inputBoloCaseiro').value = nomeBolo
     document.getElementById('boloCaseiroEscolhido').innerText = nomeBolo
+    document.getElementById('inputValorCaseiro').value = valorBolo
+    document.getElementById('valorCaseiro').innerText = valorBolo
 }
 
 
@@ -143,13 +145,15 @@ function enviarForm() {
 
 }
 
+
+
 function enviarFormCaseiro() {
 
     const bossNumber = "+558588556541"
     const name = document.getElementById('inputName2').value
     const number = document.querySelector('#inputNumber2').value
     const nameCake = document.querySelector('#inputBoloCaseiro').value
-    const valor = document.querySelector('#select-fatias2').value
+    const valor = document.querySelector('#inputValorCaseiro').value
     const adress = document.querySelector('#adress2').value
     const yourOrder = "Seu Pedido: "
     const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`

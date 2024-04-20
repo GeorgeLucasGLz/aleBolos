@@ -21,6 +21,7 @@
 
 .personalized-section {
 
+    background-size: 50px;
     padding-top: 50px;
     z-index: 0;
     display: flex;
