@@ -66,15 +66,16 @@
 }
 
 
-@media screen and (width < 1000px) {
+@media screen and (min-width: 0px) and (max-width : 1000px) {
 
     #menu-toggle {
         
         visibility: visible;
     }
 
+    
     header #links {
-       
+    
        background-color: rgba(0, 0, 0, 0.9);
 
         width: 70%;
