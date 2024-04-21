@@ -467,7 +467,7 @@ input {
     text-shadow: 0 0 7px;
 }
 
-#valorCaseiro{
+#valorCaseiro {
     font-weight: bold;
     color: rgb(252, 0, 231);
     text-transform: uppercase;
@@ -489,7 +489,7 @@ input {
     background-color: rgb(53, 53, 53);
 } */
 
-@media screen and (width < 1320px) {
+@media screen and (min-width: 0px) and (max-width: 1320px) {
 
 
 
@@ -583,7 +583,7 @@ input {
 
 }
 
-@media (width < 1150px) {
+@media screen and (min-width: 0px) and (max-width < 1150px) {
 
     .info-images {
 
@@ -593,14 +593,14 @@ input {
     }
 }
 
-@media (width < 1000px) {
+@media screen and (min-width: 0px) and (width < 1000px) {
 
 
     body {
-        
+
         background-size: 100%;
-        
-    
+
+
     }
 
     header #links {
@@ -649,34 +649,15 @@ input {
 
 }
 
-@media (width < 850px) {
-  
 
 
-
-    .images-patrocinio {
-
-        grid-template-columns: repeat(1, 1fr);
-
-    }
-
-    .patrocinio-section h1 {
-
-        font-size: 20px;
-    }
-
-
-}
-
-
-
-@media (width < 650px) {
+@media screen and (min-width: 0px) and (width < 650px) {
 
     body {
-        
+
         background-size: 150%;
-        
-    
+
+
     }
 
     .info-images img {
@@ -705,7 +686,7 @@ input {
 
 }
 
-@media (width < 520px) {
+@media screen and (min-width: 0px) and (width < 520px) {
     #cakeBanner-img {
 
         width: 350px;
@@ -724,7 +705,7 @@ input {
 
 }
 
-@media (width <405px) {
+@media screen and (min-width: 0px) and (width < 405px) {
     #links a {
         font-size: 13px;
     }
@@ -734,7 +715,7 @@ input {
     }
 }
 
-@media (width < 400px) {
+@media screen and (min-width: 0px) and (width < 400px) {
     #cakeBanner-img {
 
         width: 300px;
@@ -783,7 +764,7 @@ input {
 }
 
 
-@media (width < 350px) {
+@media screen and (min-width: 0px) and (width < 350px) {
     #first-section {
         margin-top: 150px;
     }
