@@ -488,11 +488,11 @@
 
                 <button class="btn-card" onclick="clickButtonCaseiro('Bolo Formigueiro', 'R$ 15,00')">
                     Escolher</button>
-                    <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
+                <!-- <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button> -->
 
-                    <div class="card-logo">
-                        <img src="./img/logo2.png">
-                    </div>
+                <div class="card-logo">
+                    <img src="./img/logo2.png">
+                </div>
 
             </li>
 
@@ -555,6 +555,7 @@
 
 
 
+    <!-- <form id="fale-conosco" action="https://api.staticforms.xyz/submit" method="post"> -->
     <form id="fale-conosco">
 
         <input placeholder="Seu Nome" type="text" name="Nome" id="inputName">
@@ -612,9 +613,30 @@
         <label for="adress">No caso de retirada preencha com <span>"Retirada"</span></label>
 
 
-        <button id="btnOrder" class="btn-orcamento" onclick="enviarFormGood()">Enviar Pedido</button>
+        <button id="btnOrder" class="btn-orcamento" onclick="enviarForm()">Enviar Pedido</button>
         <button id="btnBack" onclick="() => desligarMascara()">Voltar</button>
+
+
     </form>
+
+    <!-- <form id="fale-conosco">
+
+        <input placeholder="Seu Nome" type="text" name="Nome" id="inputName">
+        <input placeholder="Seu Número, Ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" maxlength="15" id="inputNumber"
+            onkeyup="handlePhone(event)">
+        <label>Tema Escolhido:</label>
+        <p id="boloEscolhido"></p>
+        <input type="hidden" name="Bolo" id="inputBolo">
+
+        <textarea name="" id="" cols="30" rows="10" placeholder="Digite informações sobre seu pedido "></textarea>
+
+
+        <button id="btnOrder" class="btn-orcamento" onclick="enviarForm()">Enviar Pedido</button>
+        <button id="btnBack" onclick="() => desligarMascara()">Voltar</button>
+
+
+    </form> -->
+    <!-- <input type="hidden" name="accessKey" value="166989fb-e1c9-4c28-8fab-41b93ad03b7d"> -->
     <div id="mascara-formulario" onclick="desligarMascara()"></div>
 
 
