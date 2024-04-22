@@ -56,7 +56,7 @@
                     <p id="p1">Adoce seu dia na <span>Alê Bolos e Doces</span></p>
 
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=5585988556541" class="btnStart1">Entrar em Contato</a>
+                <button class="btnStart1" onclick="clickButtonBasic()">Faça seu Pedido</button>
 
             </div>
 
@@ -553,14 +553,24 @@
     </section>
 
 
+    <form id="formBasic">
+        <label>Faça Seu Pedido Personalizado</label>
+        <input placeholder="Seu Nome" type="text" name="Nome" id="inputNameBasic" autocomplete="off">
+        <input placeholder="Seu Número, Ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" maxlength="15" id="inputNumberBasic"
+            onkeyup="handlePhone(event)" autocomplete="off">
+            <textarea id="formTextArea" cols="30" rows="10" placeholder="Digite informações sobre seu pedido!" autocomplete="off"></textarea>
+
+            <button id="btnOrder" class="btn-orcamento" onclick="enviarFormBasic()">Enviar Pedido</button>
+
+    </form>
 
 
     <!-- <form id="fale-conosco" action="https://api.staticforms.xyz/submit" method="post"> -->
     <form id="fale-conosco">
 
-        <input placeholder="Seu Nome" type="text" name="Nome" id="inputName">
+        <input placeholder="Seu Nome" type="text" name="Nome" id="inputName" autocomplete="off">
         <input placeholder="Seu Número, Ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" maxlength="15" id="inputNumber"
-            onkeyup="handlePhone(event)">
+            onkeyup="handlePhone(event)" autocomplete="off">
         <label>Tema Escolhido:</label>
         <p id="boloEscolhido"></p>
         <input type="hidden" name="Bolo" id="inputBolo">
@@ -609,7 +619,7 @@
         </select>
 
         <label for="adress">Endereço de Entrega</label>
-        <input type="text" id="adress" placeholder="Digite seu endereço">
+        <input type="text" id="adress" placeholder="Digite seu endereço" autocomplete="off">
         <label for="adress">No caso de retirada preencha com <span>"Retirada"</span></label>
 
 
@@ -619,32 +629,14 @@
 
     </form>
 
-    <!-- <form id="fale-conosco">
-
-        <input placeholder="Seu Nome" type="text" name="Nome" id="inputName">
-        <input placeholder="Seu Número, Ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" maxlength="15" id="inputNumber"
-            onkeyup="handlePhone(event)">
-        <label>Tema Escolhido:</label>
-        <p id="boloEscolhido"></p>
-        <input type="hidden" name="Bolo" id="inputBolo">
-
-        <textarea name="" id="" cols="30" rows="10" placeholder="Digite informações sobre seu pedido "></textarea>
-
-
-        <button id="btnOrder" class="btn-orcamento" onclick="enviarForm()">Enviar Pedido</button>
-        <button id="btnBack" onclick="() => desligarMascara()">Voltar</button>
-
-
-    </form> -->
-    <!-- <input type="hidden" name="accessKey" value="166989fb-e1c9-4c28-8fab-41b93ad03b7d"> -->
     <div id="mascara-formulario" onclick="desligarMascara()"></div>
 
 
     <form id="form-caseiro">
 
-        <input placeholder="Seu Nome" type="text" name="Nome" id="inputName2">
+        <input placeholder="Seu Nome" type="text" name="Nome" id="inputName2" autocomplete="off">
         <input placeholder="Seu Número, Ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" maxlength="15" id="inputNumber2"
-            onkeyup="handlePhone(event)">
+            onkeyup="handlePhone(event)" autocomplete="off">
         <label>Bolo Escolhido:</label>
         <p id="boloCaseiroEscolhido"></p>
         <input type="hidden" name="Bolo" id="inputBoloCaseiro">
@@ -656,7 +648,7 @@
 
 
         <label for="adress">Endereço de Entrega</label>
-        <input type="text" id="adress2" placeholder="Digite seu endereço">
+        <input type="text" id="adress2" placeholder="Digite seu endereço" autocomplete="off">
         <label for="adress">No caso de retirada preencha com <span>"Retirada"</span></label>
 
 

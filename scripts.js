@@ -1,3 +1,4 @@
+const formBasic = document.querySelector('#formBasic')
 const form = document.getElementById('fale-conosco')
 const formCaseiro = document.getElementById('form-caseiro')
 const botao = document.getElementById('btn')
@@ -46,15 +47,33 @@ function clickButton(nomeBolo) {
 
 }
 
+function clickButtonBasic() {
+
+
+
+    formBasic.style.left = "50%"
+    formBasic.style.transform = "translateX(-50%)"
+    mascara.style.visibility = "visible"
+    mascara.style.zIndex = '1'
+    formBasic.style.transition = "0.4s ease-in"
+    ulToggleBox.style.visibility = 'hidden'
+
+    document.querySelector('#inputBolo').value = nomeBolo
+    document.getElementById('boloEscolhido').innerText = nomeBolo
+
+
+}
 
 
 function desligarMascara() {
 
     form.style.left = '-340px'
     formCaseiro.style.left = '-500px'
+    formBasic.style.left = '-500px'
     mascara.style.visibility = "hidden"
     form.style.transform = 'translateX(0%)'
     formCaseiro.style.transform = 'translateX(0%)'
+    formBasic.style.transform = 'translateX(0%)'
     mascara.style.transition = '0.4s ease-in'
 
     if (window.innerWidth < 1000) {
@@ -101,6 +120,28 @@ function formatarCelular(value) {
     return value
 
 
+
+}
+
+function enviarFormBasic() {
+
+    const bossNumber = "+558588556541"
+    const name = document.getElementById('inputNameBasic').value
+    const number = document.querySelector('#inputNumberBasic').value
+    const yourOrder = document.querySelector('#formTextArea').value
+    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
+    const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
+    const msgAnalise = "Iremos analisar seu pedido e repassar-lhe o valor."
+
+
+    const url = "https://api.whatsapp.com/send?phone=" + bossNumber + "&text="
+        + msgDefault + "%0A%0A"
+        + "Nome: " + name + "." + "%0a"
+        + "Número: " + number + "." + "%0a"
+        + "Seu Pedido: " + yourOrder + "." + "%0a"
+        + msgAnalise + "%0a%0a"
+        + msgInsta + "%0a%0a";
+    window.open(url, '_blank').focus()
 
 }
 

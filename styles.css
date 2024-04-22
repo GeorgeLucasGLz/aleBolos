@@ -345,6 +345,34 @@ footer {
 
 }
 
+#formBasic {
+
+    z-index: 1000;
+    left: -500px;
+    background-color: rgb(53, 50, 52);
+    border: 3px solid #d000a5;
+    position: fixed;
+    gap: 10px;
+    margin-top: 5%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: start;
+    width: 350px;
+    max-height: 100%;
+
+}
+
+textarea {
+    background-color: rgb(53, 50, 52);
+    border: 3px solid #d000a5;
+    border-radius: 10px;
+    color: white;
+    resize: none;
+    padding: 7px;
+}
+
 
 #fale-conosco {
 
@@ -619,6 +647,11 @@ input {
         max-height: 80%;
     }
 
+    #formBasic {
+
+        max-height: 80%;
+       margin-top: 20%;
+    }
 
 
 }
@@ -712,6 +745,13 @@ input {
         margin-top: 40px;
         width: 300px;
     }
+
+    #formBasic {
+
+        width: 300px;
+    }
+
+    
 
     input {
         padding: 7px;
