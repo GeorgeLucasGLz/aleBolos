@@ -132,7 +132,7 @@ function enviarFormBasic() {
     const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
     const msgAnalise = "Iremos analisar seu pedido e repassar-lhe o valor."
-
+    const enviar = "Clique no botão de enviar para enviar sua ficha de Pedido."
 
     const url = "https://api.whatsapp.com/send?phone=" + bossNumber + "&text="
         + msgDefault + "%0A%0A"
@@ -140,7 +140,8 @@ function enviarFormBasic() {
         + "Número: " + number + "." + "%0a"
         + "Seu Pedido: " + yourOrder + "." + "%0a"
         + msgAnalise + "%0a%0a"
-        + msgInsta + "%0a%0a";
+        + msgInsta + "%0a%0a"
+        + enviar + "%0a"
     window.open(url, '_blank').focus()
 
 }
@@ -160,6 +161,7 @@ function enviarForm() {
     const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
     const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região."
     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
+    const enviar = "Clique no botão de enviar para enviar sua ficha de Pedido."
 
 
     // if (name.length || number.length === 0) {
@@ -177,57 +179,13 @@ function enviarForm() {
         + "Valor: " + valor + "." + "%0a"
         + "Endereço de Entrega: " + adress + "." + "%0a%0a"
         + msgDelivery + "%0a%0a"
-        + msgInsta + "%0A%0A";
+        + msgInsta + "%0A%0A"
+        + enviar + "%0a"
     window.open(url, '_blank').focus()
 
 
 }
 
-
-
-
-
-
-
-// Enviar Formulário
-
-// function enviarForm() {
-
-//     const bossNumber = "+558588556541"
-//     const name = document.querySelector('#inputName').value
-//     const number = document.querySelector('#inputNumber').value
-//     const nameCake = document.querySelector('#inputBolo').value
-//     const massa = document.querySelector('#select-massa').value
-//     const recheio = document.querySelector('#select-recheio').value
-//     const special = document.querySelector('#select-especial').value
-//     const valor = document.querySelector('#select-fatias').value
-//     const adress = document.querySelector('#adress').value
-//     const yourOrder = "Seu Pedido: "
-//     const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
-//     const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região."
-//     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
-
-
-//     // if (name.length || number.length === 0) {
-//     //     alert('Preencha as informações')
-//     // } else {
-//     const url = "https://wa.me/" + bossNumber + "?text="
-//         + msgDefault + "%0A%0A"
-//         + yourOrder + "%0a"
-//         + "Nome: " + name + "." + "%0a"
-//         + "Número: " + number + "." + "%0a"
-//         + "Tema Escolhido: " + nameCake + "." + "%0a"
-//         + "Massa Escolhida: " + massa + "." + "%0a"
-//         + "Recheio Escolhido: " + recheio + "." + "%0a"
-//         + "Recheio Especial: " + special + "." + "%0a"
-//         + "Valor: " + valor + "." + "%0a"
-//         + "Endereço de Entrega: " + adress + "." + "%0a%0a"
-//         + msgDelivery + "%0a%0a"
-//         + msgInsta + "%0A%0A";
-//     window.open(url, '_blank').focus()
-
-
-// }
 
 
 
@@ -243,11 +201,10 @@ function enviarFormCaseiro() {
     const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
     const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região."
     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
+    const enviar = "Clique no botão de enviar para enviar sua ficha de Pedido."
 
 
-    // if (name.length || number.length === 0) {
-    //     alert('Preencha as informações')
-    // } else {
+
     const url = "https://api.whatsapp.com/send?phone=" + bossNumber + "&text="
         + msgDefault + "%0A%0A"
         + yourOrder + "%0a"
@@ -257,7 +214,8 @@ function enviarFormCaseiro() {
         + "Valor: " + valor + "." + "%0a"
         + "Endereço de Entrega: " + adress + "." + "%0a%0a"
         + msgDelivery + "%0a%0a"
-        + msgInsta + "%0A%0A";
+        + msgInsta + "%0A%0A"
+        + enviar + "%0a"
     window.open(url, '_blank').focus()
 
 
