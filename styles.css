@@ -356,8 +356,8 @@ footer a{
     background-color: rgb(53, 50, 52);
     border: 3px solid #d000a5;
     position: fixed;
-    gap: 10px;
-    margin-top: 5%;
+    gap: 3px;
+    margin-top: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -365,17 +365,15 @@ footer a{
     justify-content: start;
     width: 350px;
     max-height: 100%;
-
+    overflow-y: scroll;
+    
 }
 
-textarea {
-    background-color: rgb(53, 50, 52);
-    border: 3px solid #d000a5;
-    border-radius: 10px;
-    color: white;
-    resize: none;
-    padding: 7px;
+
+#formBasic::-webkit-scrollbar {
+    display: none;
 }
+
 
 
 #fale-conosco {

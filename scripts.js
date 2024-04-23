@@ -128,18 +128,30 @@ function enviarFormBasic() {
     const bossNumber = "+558588556541"
     const name = document.getElementById('inputNameBasic').value
     const number = document.querySelector('#inputNumberBasic').value
-    const yourOrder = document.querySelector('#formTextArea').value
+    const nameCake = document.querySelector('#cakeThemeBasicForm').value
+    const massa = document.querySelector('#select-massaBasic').value
+    const recheio = document.querySelector('#select-recheioBasic').value
+    const special = document.querySelector('#select-especialBasic').value
+    const valor = document.querySelector('#select-fatiasBasic').value
+    const yourOrder = "Seu Pedido: "
     const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Ale Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
-    const msgAnalise = "Iremos analisar seu pedido e repassar-lhe o valor."
+    const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região."
+    const adress = document.querySelector('#adressBasic').value
     const enviar = "Clique no botão de enviar para enviar sua ficha de Pedido."
 
     const url = "https://api.whatsapp.com/send?phone=" + bossNumber + "&text="
         + msgDefault + "%0A%0A"
+        + yourOrder + "%0a"
         + "Nome: " + name + "." + "%0a"
         + "Número: " + number + "." + "%0a"
-        + "Seu Pedido: " + yourOrder + "." + "%0a"
-        + msgAnalise + "%0a%0a"
+        + "Tema Personalizado: " + nameCake + "." + "%0a"
+        + "Massa Escolhida: " + massa + "." + "%0a"
+        + "Recheio Escolhido: " + recheio + "." + "%0a"
+        + "Recheio Especial: " + special + "." + "%0a"
+        + "Valor: " + valor + "." + "%0a"
+        + "Endereço de Entrega: " + adress + "." + "%0a%0a"
+        + msgDelivery + "%0a%0a"
         + msgInsta + "%0a%0a"
         + enviar + "%0a"
     window.open(url, '_blank').focus()
