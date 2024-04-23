@@ -129,7 +129,7 @@ function enviarFormBasic() {
     const name = document.getElementById('inputNameBasic').value
     const number = document.querySelector('#inputNumberBasic').value
     const yourOrder = document.querySelector('#formTextArea').value
-    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
+    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Ale Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
     const msgAnalise = "Iremos analisar seu pedido e repassar-lhe o valor."
     const enviar = "Clique no botão de enviar para enviar sua ficha de Pedido."
@@ -155,10 +155,10 @@ function enviarForm() {
     const massa = document.querySelector('#select-massa').value
     const recheio = document.querySelector('#select-recheio').value
     const special = document.querySelector('#select-especial').value
-    const valor = document.querySelector('#inputValorCaseiro').value
-    const adress = document.querySelector('#adress2').value
+    const valor = document.querySelector('#select-fatias').value
+    const adress = document.querySelector('#adress').value
     const yourOrder = "Seu Pedido: "
-    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
+    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Ale Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
     const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região."
     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
     const enviar = "Clique no botão de enviar para enviar sua ficha de Pedido."
@@ -198,7 +198,7 @@ function enviarFormCaseiro() {
     const valor = document.querySelector('#inputValorCaseiro').value
     const adress = document.querySelector('#adress2').value
     const yourOrder = "Seu Pedido: "
-    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Alê Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
+    const msgDefault = `Olá ${name}. Bem vindo a Confeitaria Ale Bolos e Doces. Sua mensagem será respondida o mais rápido possível.`
     const msgDelivery = "Após a confirmação do pedido será calculado a taxa de entrega de acordo com sua região."
     const msgInsta = "Aproveite e siga nosso perfil no Instagram: https://www.instagram.com/ale_bolosedoces2/"
     const enviar = "Clique no botão de enviar para enviar sua ficha de Pedido."
