@@ -1,45 +1,59 @@
+
+const toggleOn = document.querySelector('.toggle-on')
+const btnOff = document.querySelector('.btn-toggle-off')
+const btnOn = document.querySelector('.btn-close')
+
+
+function showToggle() {
+
+    btnOff.style.display = 'none'
+    toggleOn.style.display = 'flex'
+
+}
+
+function turnOffToggle() {
+
+    btnOff.style.display = 'flex'
+    toggleOn.style.display = 'none'
+
+}
+
 const formBasic = document.querySelector('#formBasic')
 const form = document.getElementById('fale-conosco')
 const formCaseiro = document.getElementById('form-caseiro')
 const botao = document.getElementById('btn')
 const mascara = document.querySelector('#mascara-formulario')
 const btnToggle = document.getElementById('btn-toggle')
-const Body = document.querySelector('body')
 const makeOrder = document.querySelector('#fazer-pedido')
+const headerLinks = document.querySelector('.links')
 
 
-const ulToggleBox = document.querySelector('#links')
-const toggleLinks = document.querySelectorAll('#links a')
-function showToggle() {
-
-    ulToggleBox.style.visibility = 'visible'
-    ulToggleBox.classList.add('toggleBox')
-    ulToggleBox.style.transition = "0.4s ease-in-out"
-
+function clickButtonCaseiro(nomeBolo, valorBolo) {
+    headerLinks.style.opacity = '0'
+    headerLinks.style.visibility = 'hidden'
+    formCaseiro.style.left = "50%"
+    formCaseiro.style.transform = "translateX(-50%)"
     mascara.style.visibility = "visible"
+    mascara.style.zIndex = '1'
+    formCaseiro.style.transition = "0.4s ease-in"
+ 
 
-    toggleLinks.forEach(linksValue => {
-
-        linksValue.classList.add('toggleLinks')
-
-    })
-
-
-
+    document.querySelector('#inputBoloCaseiro').value = nomeBolo
+    document.getElementById('boloCaseiroEscolhido').innerText = nomeBolo
+    document.getElementById('inputValorCaseiro').value = valorBolo
+    document.getElementById('valorCaseiro').innerText = valorBolo
 }
-
-
 
 function clickButton(nomeBolo) {
 
 
-
+    headerLinks.style.opacity = '0'
+    headerLinks.style.visibility = 'hidden'
     form.style.left = "50%"
     form.style.transform = "translateX(-50%)"
     mascara.style.visibility = "visible"
     mascara.style.zIndex = '1'
     form.style.transition = "0.4s ease-in"
-    ulToggleBox.style.visibility = 'hidden'
 
     document.querySelector('#inputBolo').value = nomeBolo
     document.getElementById('boloEscolhido').innerText = nomeBolo
@@ -47,16 +61,17 @@ function clickButton(nomeBolo) {
 
 }
 
+
+
 function clickButtonBasic() {
 
-
-
+    headerLinks.style.opacity = '0'
+    headerLinks.style.visibility = 'hidden'
     formBasic.style.left = "50%"
     formBasic.style.transform = "translateX(-50%)"
     mascara.style.visibility = "visible"
     mascara.style.zIndex = '1'
     formBasic.style.transition = "0.4s ease-in"
-    ulToggleBox.style.visibility = 'hidden'
 
     document.querySelector('#inputBolo').value = nomeBolo
     document.getElementById('boloEscolhido').innerText = nomeBolo
@@ -66,7 +81,8 @@ function clickButtonBasic() {
 
 
 function desligarMascara() {
-
+    headerLinks.style.opacity = '1'
+    headerLinks.style.visibility = 'visible'
     form.style.left = '-340px'
     formCaseiro.style.left = '-500px'
     formBasic.style.left = '-500px'
@@ -85,19 +101,6 @@ function desligarMascara() {
 
 }
 
-function clickButtonCaseiro(nomeBolo, valorBolo) {
-    formCaseiro.style.left = "50%"
-    formCaseiro.style.transform = "translateX(-50%)"
-    mascara.style.visibility = "visible"
-    mascara.style.zIndex = '1'
-    formCaseiro.style.transition = "0.4s ease-in"
-    ulToggleBox.style.visibility = 'hidden'
-
-    document.querySelector('#inputBoloCaseiro').value = nomeBolo
-    document.getElementById('boloCaseiroEscolhido').innerText = nomeBolo
-    document.getElementById('inputValorCaseiro').value = valorBolo
-    document.getElementById('valorCaseiro').innerText = valorBolo
-}
 
 
 
@@ -243,7 +246,11 @@ const btnHouseMade = document.querySelector('#btn-house-made')
 const btnSpace = document.getElementById('btn-space')
 const btnInformation = document.getElementById('btn-informations')
 
-
+const toggleHome = document.getElementById('toggle-home')
+const togglePersonalized = document.getElementById('toggle-personalized')
+const toggleHouseMade = document.getElementById('toggle-house-made')
+const toggleInformation = document.getElementById('toggle-informations')
+const toggleSpace = document.getElementById('toggle-space')
 
 function scrollIntoElement(elementSelect, instace = 0) {
 
@@ -261,16 +268,16 @@ function scrollIntoElement(elementSelect, instace = 0) {
 btnHome.addEventListener('click', (event) => {
 
     event.preventDefault()
-    scrollIntoElement('header')
+    scrollIntoElement('html')
     mascara.style.visibility = "hidden"
-    if (window.innerWidth < 1000) {
-        ulToggleBox.style.visibility = 'hidden'
-    } else {
-        ulToggleBox.style.visibility = 'visible'
-    }
 
+})
 
-    return
+toggleHome.addEventListener('click', (event) => {
+
+    event.preventDefault()
+    scrollIntoElement('html')
+    turnOffToggle()
 })
 
 btnPersonalized.addEventListener('click', (event) => {
@@ -279,16 +286,14 @@ btnPersonalized.addEventListener('click', (event) => {
     scrollIntoElement('.personalized-section')
     mascara.style.visibility = "hidden"
 
-    if (window.innerWidth < 1000) {
-        ulToggleBox.style.visibility = 'hidden'
-    } else {
-        ulToggleBox.style.visibility = 'visible'
-    }
-
-    return
-
 })
 
+togglePersonalized.addEventListener('click', (event) => {
+
+    event.preventDefault()
+    scrollIntoElement('.personalized-section')
+    turnOffToggle()
+})
 
 btnHouseMade.addEventListener('click', (event) => {
 
@@ -296,29 +301,29 @@ btnHouseMade.addEventListener('click', (event) => {
     scrollIntoElement('.house-made-section')
     mascara.style.visibility = "hidden"
 
-    if (window.innerWidth < 1000) {
-        ulToggleBox.style.visibility = 'hidden'
-    } else {
-        ulToggleBox.style.visibility = 'visible'
-    }
+})
+
+toggleHouseMade.addEventListener('click', (event) => {
+
+    event.preventDefault()
+    scrollIntoElement('.house-made-section')
+    turnOffToggle()
 })
 
 btnSpace.addEventListener('click', (event) => {
 
     event.preventDefault()
-    scrollIntoElement('.local-section   ')
+    scrollIntoElement('.local-section')
     mascara.style.visibility = "hidden"
-
-    if (window.innerWidth < 1000) {
-        ulToggleBox.style.visibility = 'hidden'
-    } else {
-        ulToggleBox.style.visibility = 'visible'
-    }
-    return
 
 })
 
+toggleSpace.addEventListener('click', (event) => {
 
+    event.preventDefault()
+    scrollIntoElement('.local-section')
+    turnOffToggle()
+})
 
 btnInformation.addEventListener('click', (event) => {
 
@@ -326,15 +331,14 @@ btnInformation.addEventListener('click', (event) => {
     scrollIntoElement('.info-section')
     mascara.style.visibility = "hidden"
 
-    if (window.innerWidth < 1000) {
-        ulToggleBox.style.visibility = 'hidden'
-    } else {
-        ulToggleBox.style.visibility = 'visible'
-    }
-
-    return
 })
 
+toggleInformation.addEventListener('click', (event) => {
+
+    event.preventDefault()
+    scrollIntoElement('.info-section')
+    turnOffToggle()
+})
 
 
 

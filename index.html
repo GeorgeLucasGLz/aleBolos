@@ -17,7 +17,7 @@
         content="Confeitaria, confeitaria, Bolos, bolos personalizados, bolos caseiros, doces, festas, eventos, encomendas, sobremesas, bolos, caseiro, ale">
     <meta name="author" content="Confeitaria Ale Bolos e Doces">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alebolosedoces.com.br/" />
@@ -40,12 +40,42 @@
 </head>
 
 
+<header>
 
+    <nav class="links">
+        <a href="#" id="btn-home">Início</a>
+        <a href="#" id="btn-personalized">Personalizados</a>
+        <a href="#" id="btn-house-made">Caseiros</a>
+        <a href="#" id="btn-informations">informações</a>
+        <a href="#" id="btn-space">Localização</a>
+        <a href="https://api.whatsapp.com/send?phone=5585988556541" target="_blank">Contato</a>
+    </nav>
+
+    <button class="btn-toggle-off" onclick="showToggle()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<div class="toggle-on">
+    <a href="#" id="toggle-home">Início</a>
+    <a href="#" id="toggle-personalized">Personalizados</a>
+    <a href="#" id="toggle-house-made">Caseiros</a>
+    <a href="#" id="toggle-informations">informações</a>
+    <a href="#" id="toggle-space">Localização</a>
+    <a href="https://api.whatsapp.com/send?phone=5585988556541" target="_blank">Contato</a>
+
+    <button class="btn-close" onclick="turnOffToggle()">
+        <span></span>
+        <span></span>
+    </button>
+</div>
 
 
 <body>
 
-    <header>
+    <!-- <header>
 
         <ul id="links">
             <li id="btn-home"><a href="#">Início</a></li>
@@ -63,7 +93,9 @@
             </button>
         </div>
 
-    </header>
+    </header> -->
+
+
 
 
     <div class="bg-start">
@@ -332,11 +364,11 @@
                     <img src="img/boloMole.webp" class="img-list">
                 </div>
                 <div class="info-card">
-                    <p>R$ 17,00
+                    <p>R$ 18,00
                     </p>
                 </div>
 
-                <button class="btn-card" onclick="clickButtonCaseiro('Bolo Mole', 'R$ 17,00')">Escolher</button>
+                <button class="btn-card" onclick="clickButtonCaseiro('Bolo Mole', 'R$ 18,00')">Escolher</button>
 
                 <div class="card-logo">
                     <img src="./img/logo2.webp">
@@ -588,20 +620,21 @@
             <option value="Não preenchido">Escolha Aqui</option>
             <option value="Amanteigada com Aroma de Baunilha">Baunilha</option>
             <option value="Massa cremosa com chocolate 50%">Chocolate</option>
+            <option value="Massa mista">Mista</option>
         </select>
 
         <label for="select-recheioBasic">Escolha seu Recheio</label>
         <select id="select-recheioBasic">
             <option value="Não preenchido">Escolha Aqui</option>
-            <option value="4 Leites">4 Leites</option>
-            <option value="Brigadeiro">Brigadeiro</option>
             <option value="Ninho">Ninho</option>
+            <option value="Brigadeiro">Brigadeiro</option>
+            <option value="Doce de Leite">Doce de Leite</option>
             <option value="Limão">Limão</option>
             <option value="Beijinho">Beijinho</option>
-            <option value="Doce de Leite">Doce de Leite</option>
             <option value="Churros">Churros</option>
-            <option value="Maracujá">Maracujá</option>
             <option value="Oreo">Oreo</option>
+            <option value="Maracujá">Maracujá</option>
+            
         </select>
 
         <label for="select-especialBasic">Recheios Especias</label>
@@ -616,13 +649,13 @@
         <label for="select-fatiasBasic">Valor</label>
         <select id="select-fatiasBasic">
             <option value="Não preenchido">Escolha Aqui</option>
-            <option value="8 Fatias - R$ 80,00">8 Fatias - R$ 80,00</option>
-            <option value="10 Fatias - R$ 110,00">10 Fatias - R$ 110,00</option>
-            <option value="15 Fatias - R$ 130,00">15 Fatias - R$ 130,00</option>
-            <option value="20 Fatias - R$ 150,00">20 Fatias - R$ 150,00</option>
-            <option value="25 Fatias - R$ 170,00">25 Fatias - R$ 170,00</option>
-            <option value="35 Fatias - R$ 200,00">35 Fatias - R$ 200,00</option>
-            <option value="50 Fatias - R$ 250,00">50 Fatias - R$ 250,00</option>
+            <option value="6 a 8 Fatias - R$ 80,00">6 a 8 Fatias - R$ 80,00</option>
+            <option value="10 a 12 Fatias - R$ 120,00">10 a 12 Fatias - R$ 120,00</option>
+            <option value="15 a 18 Fatias - R$ 145,00">15 a 18 Fatias - R$ 145,00</option>
+            <option value="20 a 23 Fatias - R$ 170,00">20 a 23 Fatias - R$ 170,00</option>
+            <option value="25 a 28 Fatias - R$ 190,00">25 a 28 Fatias - R$ 190,00</option>
+            <option value="30 a 35 Fatias - R$ 220,00">30 a 35 Fatias - R$ 220,00</option>
+            <option value="50 a 60 Fatias - R$ 300,00">50 a 60 Fatias - R$ 300,00</option>
         </select>
 
         <label for="adressBasic">Endereço de Entrega</label>
@@ -650,20 +683,21 @@
             <option value="Não preenchido">Escolha Aqui</option>
             <option value="Amanteigada com Aroma de Baunilha">Baunilha</option>
             <option value="Massa cremosa com chocolate 50%">Chocolate</option>
+            <option value="Massa mista">Mista</option>
         </select>
 
         <label for="select-recheio">Escolha seu Recheio</label>
         <select id="select-recheio">
             <option value="Não preenchido">Escolha Aqui</option>
-            <option value="4 Leites">4 Leites</option>
-            <option value="Brigadeiro">Brigadeiro</option>
             <option value="Ninho">Ninho</option>
+            <option value="Brigadeiro">Brigadeiro</option>
+            <option value="Doce de Leite">Doce de Leite</option>
             <option value="Limão">Limão</option>
             <option value="Beijinho">Beijinho</option>
-            <option value="Doce de Leite">Doce de Leite</option>
             <option value="Churros">Churros</option>
-            <option value="Maracujá">Maracujá</option>
             <option value="Oreo">Oreo</option>
+            <option value="Maracujá">Maracujá</option>
+            
         </select>
 
         <label for="select-especial">Recheios Especias</label>
@@ -678,13 +712,13 @@
         <label for="select-fatias">Valor</label>
         <select id="select-fatias">
             <option value="Não preenchido">Escolha Aqui</option>
-            <option value="8 Fatias - R$ 80,00">8 Fatias - R$ 80,00</option>
-            <option value="10 Fatias - R$ 110,00">10 Fatias - R$ 110,00</option>
-            <option value="15 Fatias - R$ 130,00">15 Fatias - R$ 130,00</option>
-            <option value="20 Fatias - R$ 150,00">20 Fatias - R$ 150,00</option>
-            <option value="25 Fatias - R$ 170,00">25 Fatias - R$ 170,00</option>
-            <option value="35 Fatias - R$ 200,00">35 Fatias - R$ 200,00</option>
-            <option value="50 Fatias - R$ 250,00">50 Fatias - R$ 250,00</option>
+            <option value="6 a 8 Fatias - R$ 80,00">6 a 8 Fatias - R$ 80,00</option>
+            <option value="10 a 12 Fatias - R$ 120,00">10 a 12 Fatias - R$ 120,00</option>
+            <option value="15 a 18 Fatias - R$ 145,00">15 a 18 Fatias - R$ 145,00</option>
+            <option value="20 a 23 Fatias - R$ 170,00">20 a 23 Fatias - R$ 170,00</option>
+            <option value="25 a 28 Fatias - R$ 190,00">25 a 28 Fatias - R$ 190,00</option>
+            <option value="30 a 35 Fatias - R$ 220,00">30 a 35 Fatias - R$ 220,00</option>
+            <option value="50 a 60 Fatias - R$ 300,00">50 a 60 Fatias - R$ 300,00</option>
         </select>
 
         <label for="adress">Endereço de Entrega</label>
@@ -706,7 +740,7 @@
         <input placeholder="Seu Nome" type="text" name="Nome" id="inputName2" autocomplete="off">
         <input placeholder="Seu Número, Ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" maxlength="15" id="inputNumber2"
             onkeyup="handlePhone(event)" autocomplete="off">
-        <label>Bolo Escolhido:</label>
+        <label>Bolo Escolhido: </label>
         <p id="boloCaseiroEscolhido"></p>
         <input type="hidden" name="Bolo" id="inputBoloCaseiro">
 
@@ -735,7 +769,7 @@
 
     <footer>
         <a href="https://georgelucasglz.github.io/My-Porfolio-George-Lucas/">
-            Copyright © George Lucas. All rights reserved.
+            Copyright © Ale bolos e doces. All rights reserved.
         </a>
     </footer>
 
